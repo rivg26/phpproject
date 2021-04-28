@@ -1,0 +1,24 @@
+.conb{
+    display: block;
+    cursor: pointer;
+}
+.tried label{
+    font-size: 30px;
+    width: 100%;
+    padding: 3%;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border: #343A40;
+    border-radius: 0.50em;
+    color: #111;
+    outline: 0ch;
+    vertical-align: middle;
+    text-align: center;
+}
+.tried label:hover{
+    box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+    color: #111;
+    transform: translateY(-7px);
+}
+

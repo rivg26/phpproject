@@ -1,0 +1,39 @@
+
+
+#form-messages{
+    background-color: #ebd0ff;;
+    border: 1px solid #301B3F;;
+    color: #301B3F;
+    display: none;
+    font-size: 12px;
+    font-weight: bold;
+    margin-top: 10px;
+    padding: 10px 25px;
+    justify-content: center;
+    text-align: center;
+    border-radius: 5px;
+  }
+
+#form-messages li{
+  list-style: none;
+}
+
+#login{
+  width: 100%;
+  padding: 2% 10%;
+  align-items: center;
+  justify-content: center;
+  margin: 1% 1% 0 0;
+  background-color: #810000;
+  border: #810000;
+  border-radius: 40px;
+  color: #fffcfc;
+  outline: 0ch;
+  vertical-align: middle;
+}
+#login:hover{
+  background-color: #2EE59D;
+  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  color: #fff;
+  transform: translateY(-7px);
+}

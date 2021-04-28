@@ -1,0 +1,186 @@
+/* [class*="col"]{
+    padding: 1rem;
+    background-color: #33b5e5;
+    border: 2px solid #fff;
+    text-align: center;
+    }
+
+[class*="con"]{
+        padding: 1rem;
+        background-color: #9e33e5;
+        border: 2px solid #fff;
+        color: #fff;
+        text-align: center;
+} */
+body{
+    background-color: #fffcfc;
+}
+
+.po-1{
+    position: relative;
+    top: 0%;
+    left: 8%;
+}
+.po-2{
+    position: relative;
+    top: 0%;
+    left: 8%;
+}
+.enter{
+    width: 100%;
+    height: 100%;
+    background-color: #FFC107;
+    border: #343A40;
+    border-radius: 0.50em;
+    color: #fffcfc;
+    outline: 0ch;
+    vertical-align: middle;
+    align-items: center;
+    justify-content: center;
+
+}
+.button-sizeyay button{
+    width: 24%;
+    padding: 5% 10%;
+    align-items: center;
+    justify-content: center;
+    margin: 1% 1% 0 0;
+    background-color: #343A40;
+    border: #343A40;
+    border-radius: 0.50em;
+    color: #fffcfc;
+    outline: 0ch;
+    vertical-align: middle;
+}
+.button-sizeyay2 button{
+    width: 24%;
+    padding: 5% 10%;
+    align-items: center;
+    justify-content: center;
+    margin: 1% 1% 0 0;
+    background-color: #343A40;
+    border: #343A40;
+    border-radius: 0.50em;
+    color: #fffcfc;
+    outline: 0ch;
+    vertical-align: middle;
+}
+.button-sizeyay2 button:nth-child(1){
+    width: 24%;
+    align-items: center;
+    justify-content: center;
+    padding: 5% 24%;
+    margin: 1% 2% 0 0;
+    background-color: #343A40;
+    border: #343A40;
+    border-radius: 0.50em;
+    color: #fffcfc;
+    outline: 0ch;
+    vertical-align: middle;
+}
+
+.buttoncommand{
+    margin:0;
+    padding:0;
+    position: relative;
+    left: 10%;
+    top:10%;
+}
+.buttoncommand button{
+    width: 20%;
+    padding: 3%;
+    align-items: center;
+    justify-content: center;
+    background-color: #343A40;
+    border: #343A40;
+    border-radius: 0.50em;
+    color: #fffcfc;
+    outline: 0ch;
+    vertical-align: middle;
+}
+.butcart button{
+    width: 20%;
+    padding: 3%;
+    align-items: center;
+    justify-content: center;
+    background-color: #343A40;
+    border: #343A40;
+    border-radius: 0.50em;
+    color: #fffcfc;
+    outline: 0ch;
+    vertical-align: middle;
+}
+
+.button-sizeyay button:hover{
+    background-color: #2EE59D;
+    box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+}
+.button-sizeyay2 button:hover{
+    background-color: #2EE59D;
+    box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+}
+.buttoncommand button:hover{
+    background-color: #2EE59D;
+    box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+}
+.enter:hover{
+    background-color: #2EE59D;
+    box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+}
+
+.button-sizehalf{
+    width: 45%;
+}
+
+.margin-calculator{
+    padding: 0;
+}
+
+.radiob{
+    position: relative;
+    left: 10%;
+    top: 15%;
+    margin-bottom: 5%;
+}
+.radiocus{
+    margin-top: 10%;
+}
+.radiocus label{
+    position: relative;
+    left: 10%;
+    top: 15%;
+    margin-bottom: 5%;
+    font-size: 14px;
+}
+
+
+@media only screen and (max-width:576px){
+    .radiocus label{
+        position: relative;
+        left: 10%;
+        top: 15%;
+        margin-bottom: 10%;
+        font-size: 9px;
+    }
+    .radiocus{
+        display: flex;
+        flex: row wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+        align-content: space-between;
+    }
+    .buttoncommand button{
+        font-size: 10px;
+    }
+   
+}
+
+

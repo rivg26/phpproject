@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+body{
+    padding-top:4.2rem;
+    padding-bottom:4.2rem;
+    background:#6b011f;
+    }
+    a{
+     text-decoration:none !important;
+     color: #e84545;
+     }
+     p{
+      color: #810000;
+     }
+     h1,h2,h3{
+     font-family: Lobster;
+     color: #810000;
+     }
+      .myform{
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 1rem;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 100%;
+    pointer-events: auto;
+    background-color: #eeebdd;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: 1.1rem;
+    outline: 0;
+    max-width: 500px;
+     }
+     .tx-tfm{
+     text-transform:uppercase;
+     }
+     .mybtn{
+     border-radius:50px;
+     }
+    
+     .login-or {
+     position: relative;
+     color: #864000;
+     margin-top: 10px;
+     margin-bottom: 10px;
+     padding-top: 10px;
+     padding-bottom: 10px;
+     }
+     .span-or {
+     display: block;
+     position: absolute;
+     left: 50%;
+     top: -2px;
+     margin-left: -25px;
+     background-color: #fff;
+     width: 50px;
+     text-align: center;
+     }
+     .hr-or {
+     height: 1px;
+     margin-top: 0px !important;
+     margin-bottom: 0px !important;
+     }
+     .google {
+     color:#301B3F;
+     width:100%;
+     height:40px;
+     text-align:center;
+     outline:none;
+     border: 1px solid #301B3F;
+     }
+
+     .error {
+     color: #ff0000;
+     }
+     .success {
+     color: green;
+     }
+     #second{display:none;}
+     .input-error{
+      box-shadow: 0 0 5px red;
+     }
