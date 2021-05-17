@@ -58,6 +58,7 @@
         $('table tr').click(function(){
             let id = $(this).attr('row.id');
             window.open("http://localhost/xampp/Design/erp2.php?id=" + id);
+            console.log("true");
         });
     });
 </script>

@@ -1,10 +1,12 @@
 <?php
     require_once 'includes/functions.inc.php';
     require_once 'includes/dbh.inc.php';
-    $conn = OpenCon();
+    
     if(isset($_GET['id'])){
         $id = $_GET['id'];
+        $conn = OpenCon();
         $text = getResult($conn,$id);
+        $conn->close();
         $firstName = $text['fname'];
         $middleName = $text['mname'];
         $lastName = $text['lname'];
@@ -30,6 +32,7 @@
         $country = $text['country'];
         $zipCode = $text['zip'];
         $picPath = $text['picpath'];
+        $newPicPath = str_replace("../","",$picPath);
     }
     else{
         $firstName = null;
@@ -57,7 +60,10 @@
         $country = null;
         $zipCode = null;
         $picPath = null;
+        $newPicPath = null;
+        $noimage = "pictures/noimage.jpg";
     }
+
 
 ?>
 
@@ -127,7 +133,7 @@
             <div class="col-md-4 xs-12">
             <form action="includes/upload.inc.php" method = "post" id="pic-upload" class="a-form" enctype="multipart/form-data">
                 <div class="row" id ="pic-box" >
-                <img src="pictures/noimage.jpg" class ="imageclass" alt="" id ="imagesrc">
+                <img src="<?php echo isset($text['picpath'])? $newPicPath:$noimage ?>" class ="imageclass" alt="" id ="imagesrc">
                 </div>
                 <div class="row mt-3 w-75 ms-5">
                     <input type="file" class="form-control border-0 uploadfile"  id="inputGroupFile02" name="uploadfile">
@@ -137,11 +143,13 @@
 
             <div class="col-md-8 xs-12">
 
-            <form action="includes/send.inc.php" method = "post">
+            
+
+            <form action="includes/send.inc.php" method = "post" id='myForm' class ="formclass">
                 <div class="row">
                     <div class="col-md-3 sm-12">
                         <label for="formGroupExampleInput">First Name</label>
-                        <input type="text" class="form-control bg-white rounded shadow-sm" id="formGroupExampleInput" placeholder="" name = "firstname" value="<?= $firstName ?>" >
+                        <input type="text" class="form-control bg-white rounded shadow-sm" id="formGroupExampleInput" placeholder="" name = "firstname" value="<?php echo $firstName; ?>" >
                     </div>
                     <div class="col-md-3 sm-12">
                         <label for="formGroupExampleInput">Middle Name</label>
@@ -735,7 +743,7 @@
         <div class="row">
             <div class="col-12 sm-12 my-5">
                 <label for="formGroupExampleInput">Picture Path</label>
-                <input type="text" class="form-control bg-white rounded shadow-sm picpath" id="formGroupExampleInput" placeholder="" name = "picpath"  value="<?= $picPath ?>"readonly>
+                <input type="text" class="form-control bg-white rounded shadow-sm picpath" id="formGroupExampleInput" placeholder="" name = "picpath"  value="<?= $newPicPath ?>"readonly>
             </div>
         </div>
     </div>

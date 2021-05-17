@@ -4,7 +4,7 @@
         <div class="row">
             <div class="col-md-6 sm-12 buttondesign">
                 <button type="submit" name = "save" class="save">Save</button>
-                <button type="submit" name = "cancel" class="">Cancel</button>
+                <button type="submit" name = "canceled" >Cancel</button>
             </div>
             
             
@@ -25,7 +25,6 @@
     </div>
 </form>   
 </body>
-
+<script type="text/javascript" src="js/control.js"></script>
 </html>
-
 <script src ="js/upload.js"></script>
