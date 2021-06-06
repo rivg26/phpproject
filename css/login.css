@@ -1,0 +1,18 @@
+
+
+#form-messages{
+    background-color: #ebd0ff;
+    border: 1px solid #301B3F;
+    color: #301B3F;
+    display: none;
+    font-size: 12px;
+    font-weight: bold;
+    margin-top: 10px;
+    padding: 10px 25px;
+    justify-content: center;
+    text-align: center;
+    border-radius: 5px;
+  }
+  #form-messages li{
+   list-style: none;
+  }

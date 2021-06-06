@@ -9,124 +9,87 @@ $(document).ready(function(){
     let price,quantity, discountAmount, discountedAmount, cash, change,x,sum,discount;
 
     /* Labels and Pictures Displaying Name and Price */
+
+    
+
     $("#pizza1 ,#picpizza1").click(function(e){
-        e.preventDefault();
-        $(".itemname").val("Pizza al taglio");
-        $(".price").val("500");
+        displayInfo("Pizza al taglio","500",e);
     });
     
     $("#pizza2, #picpizza2").click(function(e){
-        e.preventDefault();
-        $(".itemname").val("Pizzette");
-        $(".price").val("600");
+        displayInfo("Pizzette","600",e);
     });
 
     $("#pizza3, #picpizza3").click(function(e){
-        e.preventDefault();
-        $(".itemname").val("Sicilian Pizza");
-        $(".price").val("700");
+        displayInfo("Sicilian Pizza","700",e);
     });
 
     $("#pizza4 , #picpizza4").click(function(e){
-        e.preventDefault();
-        $(".itemname").val("Manakish");
-        $(".price").val("800");
+        displayInfo("Manakish","800",e);
     });
 
     $("#pizza5, #picpizza5").click(function(e){
-        e.preventDefault();
-        $(".itemname").val("Tarte flambee");
-        $(".price").val("900");
+        displayInfo("Tarte flambee","900",e);
     });
 
     $("#pizza6, #picpizza6").click(function(e){
-        e.preventDefault();
-        $(".itemname").val("Primavera");
-        $(".price").val("1000");
+        displayInfo("Primavera","1000",e);
     });
 
     $("#pizza7, #picpizza7").click(function(e){
-        e.preventDefault();
-        $(".itemname").val("Pizza Romana");
-        $(".price").val("1100");
+        displayInfo("Pizza Romana","1100",e);
     });
 
     $("#pizza8, #picpizza8").click(function(e){
-        e.preventDefault();
-        $(".itemname").val("Proscuitto");
-        $(".price").val("1200");
+        displayInfo("Proscuitto","1200",e);
     });
 
     $("#pizza9, #picpizza9").click(function(e){
-        e.preventDefault();
-        $(".itemname").val("Grizzled Pizza");
-        $(".price").val("1300");
+        displayInfo("Grizzled Pizza","1300",e);
     });
 
     $("#pizza10, #picpizza10").click(function(e){
-        e.preventDefault();
-        $(".itemname").val("Pinsa Romana");
-        $(".price").val("1400");
+        displayInfo("Pinsa Romana","1400",e);
     });
 
     $("#pizza11, #picpizza11").click(function(e){
-        e.preventDefault();
-        $(".itemname").val("Pizza Fritta");
-        $(".price").val("1500");
+        displayInfo("Pizza Fritta","1500",e);
     });
 
     $("#pizza12, #picpizza12").click(function(e){
-        e.preventDefault();
-        $(".itemname").val("Padellino");
-        $(".price").val("1600");
+        displayInfo("Padellino","1600",e);
     });
 
     $("#pizza13, #picpizza13").click(function(e){
-        e.preventDefault();
-        $(".itemname").val("Fugazza");
-        $(".price").val("1700");
+        displayInfo("Fugazza","1700",e);
     });
 
     $("#pizza14, #picpizza14").click(function(e){
-        e.preventDefault();
-        $(".itemname").val("Grandma Pi");
-        $(".price").val("1800");
+        displayInfo("Grandma Pi","1800",e);
     });
 
     $("#pizza15, #picpizza15").click(function(e){
-        e.preventDefault();
-        $(".itemname").val("Stuffed Pizza");
-        $(".price").val("1900");
+        displayInfo("Stuffed Pizza","1900",e);
     });
 
     $("#pizza16, #picpizza16").click(function(e){
-        e.preventDefault();
-        $(".itemname").val("Apizza");
-        $(".price").val("2000");
+        displayInfo("Apizza","2000",e);
     });
 
     $("#pizza17, #picpizza17").click(function(e){
-        e.preventDefault();
-        $(".itemname").val("Fugazetta");
-        $(".price").val("2100");
+        displayInfo("Fugazetta","2100",e);
     });
 
     $("#pizza18, #picpizza18").click(function(e){
-        e.preventDefault();
-        $(".itemname").val("Pizza Rustica");
-        $(".price").val("2200");
+        displayInfo("Pizza Rustica","2200",e);
     });
 
     $("#pizza19, #picpizza19").click(function(e){
-        e.preventDefault();
-        $(".itemname").val("Garlic Fingers");
-        $(".price").val("2300");
+        displayInfo("Garlic Fingers","2300",e);
     });
 
     $("#pizza20, #picpizza20").click(function(e){
-        e.preventDefault();
-        $(".itemname").val("Alla Pala");
-        $(".price").val("2400");
+        displayInfo("Alla Pala","2400",e);
     });
 
     /* Radio Buttons Function */
@@ -135,132 +98,104 @@ $(document).ready(function(){
 
         if($(this).prop("checked") == true){
             discount = 30;
-
-            price = parseFloat($(".price").val());
-            quantity = parseFloat($(".quantity").val());
-            sum = price * quantity;
-            discountAmount = (discount/100) * sum;
-            discountedAmount = sum - discountAmount;
-    
-            $(".discountamount").val(discountAmount); 
-            $(".discountedamount").val(discountedAmount);
-            $(".tq").val(quantity);
-            $(".tdg").val(discountAmount);
-            $(".tda").val(discountedAmount);
-
+            totalComputation(discount);
             $(".radiodisc").prop("checked",false);
             $(".radioemp").prop("checked",false);
             $(".radionum").prop("checked",false);
           
         }
+
     });
 
     $(".radiodisc").click(function(){
 
         if($(this).prop("checked") == true){
             discount = 20;
-            
-            price = parseFloat($(".price").val());
-            quantity = parseFloat($(".quantity").val());
-            sum = price * quantity;
-            discountAmount = (discount/100) * sum;
-            discountedAmount = sum - discountAmount;
-    
-            $(".discountamount").val(discountAmount); 
-            $(".discountedamount").val(discountedAmount);
-            $(".tq").val(quantity);
-            $(".tdg").val(discountAmount);
-            $(".tda").val(discountedAmount);
-
+            totalComputation(discount);
             $(".radiosenior").prop("checked",false);
             $(".radioemp").prop("checked",false);
             $(".radionum").prop("checked",false);
- 
-
         }
+
     });
 
     $(".radioemp").click(function(){
 
         if($(this).prop("checked") == true){
            discount =  15;
-
-           price = parseFloat($(".price").val());
-           quantity = parseFloat($(".quantity").val());
-           sum = price * quantity;
-           discountAmount = (discount/100) * sum;
-           discountedAmount = sum - discountAmount;
-   
-           $(".discountamount").val(discountAmount); 
-           $(".discountedamount").val(discountedAmount);
-           $(".tq").val(quantity);
-           $(".tdg").val(discountAmount);
-           $(".tda").val(discountedAmount);
-
+           totalComputation(discount);
            $(".radiosenior").prop("checked",false);
            $(".radiodisc").prop("checked",false);
            $(".radionum").prop("checked",false);
 
         }
+
     });
 
     $(".radionum").click(function(){
 
         if($(this).prop("checked") == true){
             discount = 0;
-
-            price = parseFloat($(".price").val());
-            quantity = parseFloat($(".quantity").val());
-            sum = price * quantity;
-            discountAmount = (discount/100) * sum;
-            discountedAmount = sum - discountAmount;
-    
-            $(".discountamount").val(discountAmount); 
-            $(".discountedamount").val(discountedAmount);
-            $(".tq").val(quantity);
-            $(".tdg").val(discountAmount);
-            $(".tda").val(discountedAmount);
-
+            totalComputation(discount);
             $(".radiodisc").prop("checked",false);
             $(".radioemp").prop("checked",false);
             $(".radiosenior").prop("checked",false);
         }
+
     });
 
     /* Calculate Total Value */
+
     $("#calculate").click(function(){
-        
+  
         cash = parseFloat($(".cashgiven").val());
         change = cash - discountedAmount;
+        $(".changeinput").val(change); 
 
-        $(".changeinput").val(change);
-        
-        
     });
 
     /* Clear Button Function */
+
     $("#new").click(function(e){
 
-        e.preventDefault();
-        $(".itemname").val('');
-        $(".price").val('');
-        $(".quantity").val('');
-        $(".discountamount").val(''); 
-        $(".discountedamount").val('');
-        $(".tq").val('');
-        $(".tdg").val('');
-        $(".tda").val('');
-        $(".cashgiven").val('');
-        $(".changeinput").val('');
-        $(".radiosenior").prop("checked",false);
-        $(".radiodisc").prop("checked",false);
-        $(".radioemp").prop("checked",false);
-        $(".radionum").prop("checked",false);
-        
+        clearData(e);
+
     });
 
     $("#cancel").click(function(e){
 
+        clearData(e);
+
+    });
+
+    /* All Functions */
+
+    function totalComputation(discount){
+ 
+        price = parseFloat($(".price").val());
+        quantity = parseFloat($(".quantity").val());
+        sum = price * quantity;
+        discountAmount = (discount/100) * sum;
+        discountedAmount = sum - discountAmount;
+
+        $(".discountamount").val(discountAmount); 
+        $(".discountedamount").val(discountedAmount);
+        $(".tq").val(quantity);
+        $(".tdg").val(discountAmount);
+        $(".tda").val(discountedAmount);
+
+    }
+
+    function displayInfo(name,price,e){
+
+        e.preventDefault();
+        $(".itemname").val(name);
+        $(".price").val(price);
+
+    }
+  
+    function clearData(e){
+
         e.preventDefault();
         $(".itemname").val('');
         $(".price").val('');
@@ -277,9 +212,8 @@ $(document).ready(function(){
         $(".radioemp").prop("checked",false);
         $(".radionum").prop("checked",false);
 
-    });
+    }
 
-  
  
     
 });

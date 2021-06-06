@@ -38,6 +38,8 @@
                 $picPath = '../uploads/' . $pic_filename;
             }
             $conn = OpenCon();
+            savePayrollList($conn,$empNumber);
+            saveUserAccount($conn,$empNumber);
             saveBtn($conn,$empNumber,$firstName,$middleName,$lastName,$suffix,$dob,$gender,$nationality,$civilstatus,$department,$designation,$deptStatus,$empStatus,$paydate,$contactNumber,$email,$socialMedia,$socialMediaID, $address1,$address2,$city,$state,$country,$zipCode,$picPath);
             $conn->close();
         }
@@ -90,6 +92,7 @@
             $conn->close();
         }
 
+     
 
 
 

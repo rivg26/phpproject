@@ -34,3 +34,4 @@
 <script type="text/javascript" src="js/control.js"></script>
 <script src ="js/upload.js"></script>
 </html>
+<?php require_once 'mainFooter.php'?>
